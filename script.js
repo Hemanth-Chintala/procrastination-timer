@@ -87,7 +87,7 @@ const loadSettings = () => {
 
 // Update streak in UI and localStorage
 const updateStreak = (count) => {
-    streak = count;
+    streak =count;
     localStorage.setItem('pomoStreak', streak);
     streakCount.textContent = streak;
 };
@@ -371,6 +371,7 @@ const toggleDarkMode = () => {
 
 // Initialize app
 const initApp = () => {
+    streak=0;
     // Load settings from localStorage
     loadSettings();
     
@@ -399,3 +400,6 @@ const initApp = () => {
 
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', initApp);
+// document.addEventListener('DOMContentLoaded',()=>{
+//     streak=0;
+// })
