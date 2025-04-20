@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoPower - Productivity Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PomoPower 🍅</h1>
+        <div class="streak-display">
+            <span class="streak-icon">🔥</span>
+            <span class="streak-count">0</span>
+            <span>Sessions</span>
+        </div>
+        <div class="toggle-container">
+            <span class="toggle-icon">☀️</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-icon">🌙</span>
+        </div>
+    </header>
+    <main>
+        <div class="time-input-container">
+            <div class="time-input-group">
+                <label for="minutes-input">Minutes</label>
+                <input type="number" id="minutes-input" class="time-input" value="25" min="1" max="60">
+            </div>
+            <div class="time-input-group">
+                <label for="seconds-input">Seconds</label>
+                <input type="number" id="seconds-input" class="time-input" value="0" min="0" max="59">
+            </div>
+        </div>
+        <div class="timer-container">
+            <div class="timer-display">25:00</div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="button-container">
+                <button class="timer-btn start-btn" id="start-btn">
+                    <span>Start</span>
+                </button>
+                <button class="timer-btn pause-btn" id="pause-btn" disabled>
+                    <span>Pause</span>
+                </button>
+                <button class="timer-btn lap-btn" id="lap-btn" disabled>
+                    <span>Lap</span>
+                </button>
+                <button class="timer-btn reset-btn" id="reset-btn">
+                    <span>Reset</span>
+                </button>
+            </div>
+        </div>
+        <div class="settings-container">
+            <div class="settings-option">
+                <input type="checkbox" id="sound-toggle" checked>
+                <label for="sound-toggle" class="settings-label">Sound Effects</label>
+            </div>
+            <div class="settings-option">
+                <input type="checkbox" id="meme-toggle" checked>
+                <label for="meme-toggle" class="settings-label">Show Memes</label>
+            </div>
+            <div class="settings-option">
+                <input type="checkbox" id="quote-toggle" checked>
+                <label for="quote-toggle" class="settings-label">Show Quotes</label>
+            </div>
+        </div>
+        <div class="laps-container" id="laps-container">
+            <h3 class="laps-title">Session History</h3>
+            <!-- Lap records will be added here -->
+        </div>
+        <div class="reward-container" id="reward-container">
+            <h2 class="reward-title">Great Job! Session Complete! 🎉</h2>
+            <img src="" alt="reward meme" class="reward-img" id="reward-img">
+            <p class="reward-quote" id="reward-quote">"Success is not final, failure is not fatal: It is the courage to continue that counts."</p>
+            <p class="reward-author" id="reward-author">- Winston Churchill</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
